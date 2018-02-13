@@ -1,0 +1,67 @@
+//
+//  MainGame.swift
+//  BattleShipsProject
+//
+//  Created by user135621 on 2/13/18.
+//  Copyright © 2018 Lucas_Kielak. All rights reserved.
+//
+
+import Foundation
+
+class MainGame {
+    
+    var state = GameState.Initializing;
+    var FieldSize: Int;
+    
+    var playerField: [Hitbox];
+    var computerField: [Hitbox];
+    
+    var player: Player;
+    var computer: Player;
+    
+    //ships counter - how many ships should have player
+    var numberOfPlayerFigthers1: Int
+    var numberOfPlayerHunters2: Int
+    var numberOfPlayerCruisers3: Int
+    var numberOfPlayerBattleships4: Int
+    
+    var numberOfComputerFigthers1: Int
+    var numberOfComputerHunters2: Int
+    var numberOfComputerCruisers3: Int
+    var numberOfComputerBattleships4: Int
+    
+    init(_fieldsize: Int) {
+        self.state = GameState.Initializing;
+        self.FieldSize = _fieldsize;
+        self.playerField = [];
+        self.computerField = [];
+        let tmp = self.FieldSize * self.FieldSize;
+        for _ in 0...tmp-1 {
+            self.playerField.append(Hitbox.Space)
+            self.computerField.append(Hitbox.Space)
+        }
+        
+        self.numberOfPlayerFigthers1 = 5
+        self.numberOfPlayerHunters2 = 4
+        self.numberOfPlayerCruisers3 = 3
+        self.numberOfPlayerBattleships4 = 2
+        
+        self.numberOfComputerFigthers1 = 5
+        self.numberOfComputerHunters2 = 4
+        self.numberOfComputerCruisers3 = 3
+        self.numberOfComputerBattleships4 = 2
+        
+        self.player = Player(_id: 1, _name: "Captian");
+        self.computer = Player(_id: 2, _name: "Enemy");
+        
+    }
+    
+    func numberOfPlayerShipsLeftToPlace() -> Int {
+        return numberOfPlayerCruisers3+numberOfPlayerHunters2+numberOfPlayerFigthers1+numberOfPlayerBattleships4;
+    }
+    
+    func numberOfComputerShipsLeftToPlace() -> Int {
+        return numberOfComputerCruisers3+numberOfComputerHunters2+numberOfComputerFigthers1+numberOfComputerBattleships4;
+    }
+    
+}
