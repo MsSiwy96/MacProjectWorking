@@ -753,9 +753,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Xa-qC0">
-                                <rect key="frame" x="-3" y="-3" width="456" height="306"/>
+                                <rect key="frame" x="0.0" y="-93" width="673" height="393"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" imageFrameStyle="photo" image="water_backround" id="pco-5v-bdj"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="water_backround" id="pco-5v-bdj"/>
                             </imageView>
                         </subviews>
                     </view>

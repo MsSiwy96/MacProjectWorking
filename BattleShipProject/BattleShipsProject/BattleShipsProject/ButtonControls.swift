@@ -1,10 +1,3 @@
-//
-//  ButtonControls.swift
-//  BattleShipsProject
-//
-//  Created by user135621 on 2/13/18.
-//  Copyright © 2018 Lucas_Kielak. All rights reserved.
-//
 
 import Foundation
 import Cocoa
@@ -56,7 +49,6 @@ class TechUnits {
             alert.addButton(withTitle: "No")
         }
         
-        
         return alert.runModal() == .alertFirstButtonReturn
     }
     
@@ -64,9 +56,7 @@ class TechUnits {
         return Int(arc4random_uniform(_: UInt32(a)))
     }
     
-    
-    // DEPRECATED
-    //this funct helps to change button apparience on battlefield when placing ships
+    //this function helps to change button appearence on battlefield when placing ships, it may be outdated
     static func setPositionOfShips(ArrayWithButton: [NSButton], tag: Int, kindOfShip: String) -> Void {
         ArrayWithButton[tag].title = kindOfShip;
     }

@@ -1,10 +1,3 @@
-//
-//  MainGame.swift
-//  BattleShipsProject
-//
-//  Created by user135621 on 2/13/18.
-//  Copyright © 2018 Lucas_Kielak. All rights reserved.
-//
 
 import Foundation
 
@@ -37,19 +30,19 @@ class MainGame {
         self.computerField = [];
         let tmp = self.FieldSize * self.FieldSize;
         for _ in 0...tmp-1 {
-            self.playerField.append(Hitbox.Space)
-            self.computerField.append(Hitbox.Space)
+            self.playerField.append(Hitbox.Water)
+            self.computerField.append(Hitbox.Water)
         }
         
-        self.numberOfPlayerFigthers1 = 5
-        self.numberOfPlayerHunters2 = 4
-        self.numberOfPlayerCruisers3 = 3
-        self.numberOfPlayerBattleships4 = 2
+        self.numberOfPlayerFigthers1 = 1
+        self.numberOfPlayerHunters2 = 1
+        self.numberOfPlayerCruisers3 = 1
+        self.numberOfPlayerBattleships4 = 1
         
-        self.numberOfComputerFigthers1 = 5
-        self.numberOfComputerHunters2 = 4
-        self.numberOfComputerCruisers3 = 3
-        self.numberOfComputerBattleships4 = 2
+        self.numberOfComputerFigthers1 = 1
+        self.numberOfComputerHunters2 = 1
+        self.numberOfComputerCruisers3 = 1
+        self.numberOfComputerBattleships4 = 1
         
         self.player = Player(_id: 1, _name: "Captian");
         self.computer = Player(_id: 2, _name: "Enemy");
